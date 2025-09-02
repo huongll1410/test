@@ -7,12 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'run action ne'
+        id: foo
         uses: './action.yml'
         with:
           name: 'xuxu'
           age: 20
 
       - name: 'show output'
-        run: echo "Result is ${{ steps.test-action.outputs.result }}"
+        run: echo "Result is ${{ steps.foo.outputs.result }}"
     
 
