@@ -14,5 +14,5 @@ jobs:
           age: 20
 
       - name: 'show output'
-        run: echo "Result is ${{ steps.foo.outputs.result }}"
+        run: echo "Ket quuaa is ${{ steps.foo.outputs.result }}"
     
