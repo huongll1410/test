@@ -1,0 +1,17 @@
+name: 'reusable job ne'
+
+on: [push]
+
+jobs: 
+  test_checkout:
+    name: 'job checkout'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'checkout code'
+        uses: actions/checkout@v4
+      - name: 'node js step'
+        uses: actions/setup-node@v3.9.1
+        with:
+          node-version: '18'
+      - name: 'ket thuc step'
+        run: echo 'ket thuc ne'
