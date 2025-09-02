@@ -3,6 +3,8 @@ name: Use Composite Action
 on: [push]
 
 jobs:
+  dung_reuse_job:
+    uses: ./.github/workflows/reusable-workflow.yml
   test_actions:
     runs-on: ubuntu-latest
     steps:
