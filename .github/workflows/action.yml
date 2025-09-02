@@ -1,0 +1,23 @@
+name: 'action file'
+description: 'mieu ta'
+inputs:
+  - name:
+  required: true
+  default: 'huogn'
+  - age:
+  required: true
+  default: 12
+outputs:
+  - result: 
+  description: 'ket qua nhan'
+  value: ${{steps.calculator-plus.outputs.ketQua}}
+
+runs:
+  using: "composite"
+  steps:
+    - name: 'tinh toan'
+    id: calculator-plus
+    shell: bash
+    run: |
+     ketQua=$(( ${{ inputs.age }} * ${{ inputs.age }} ))
+     echo "ketQua=$ketQua" >> $GITHUB_OUTPUT
