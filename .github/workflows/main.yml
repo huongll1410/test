@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: 'run action ne'
         id: foo
-        uses: './action.yml'
+        uses: ./.github/workflows/action.yml
         with:
           name: 'xuxu'
           age: 20
